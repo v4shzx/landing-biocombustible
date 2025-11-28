@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Minijuego</title>
+    <link rel="stylesheet" href="css/game-styles.css" />
+</head>
+
+<body>
+
+    <div id="startMenu">
+        <h1>Bio-Reciclaje</h1>
+        <p>¡Ayuda a separar los residuos!</p>
+        <div class="instructions">
+            <p>🍎 Recoge los residuos <strong>ORGÁNICOS</strong> para ganar puntos.</p>
+            <p>🛢️ Evita los residuos <strong>INORGÁNICOS</strong> o perderás puntos.</p>
+            <p>Mueve el bote con las flechas o tocando la pantalla.</p>
+        </div>
+        <button id="startButton">Jugar Ahora</button>
+    </div>
+    <button id="pauseButton" style="display:none;" aria-label="Pausar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+        </svg>
+    </button>
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="js/game.js"></script>
+</body>}
+
+</html>

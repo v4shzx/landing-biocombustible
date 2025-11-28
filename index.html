@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biotecnología </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 w-full z-30 bg-black bg-opacity-70 backdrop-filter backdrop-blur">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                    <span class="text-black font-bold">Bio</span>
+                </div>
+                <span class="font-semibold text-white">Biotecnología Viva</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#inicio" class="hover:text-green-400">Inicio</a>
+                <a href="#aplicaciones" class="hover:text-green-400">Aplicaciones</a>
+                <a href="#beneficios" class="hover:text-green-400">Beneficios</a>
+                <a href="#desarrollo" class="hover:text-green-400">Desarrollo</a>
+                <a href="#equipo" class="hover:text-green-400">Equipo</a>
+                <a href="#contacto" class="hover:text-green-400">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-800 transition focus:outline-none"
+                    aria-label="Cambiar tema">
+                    <!-- Sun Icon (Visible by default for Dark Mode) -->
+                    <svg id="sun-icon" class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <!-- Moon Icon (Hidden by default for Dark Mode) -->
+                    <svg id="moon-icon" class="w-5 h-5 text-gray-800 hidden" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="game.html"
+                    class="hidden md:inline-block bg-green-600 text-yellow-300 px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-400 transition">
+                    Probar juego
+                </a>
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-black bg-opacity-95 absolute top-full left-0 w-full border-t border-gray-800">
+            <nav class="flex flex-col px-6 py-4 space-y-4 text-sm">
+                <a href="#inicio" class="block text-gray-300 hover:text-green-400">Inicio</a>
+                <a href="#aplicaciones" class="block text-gray-300 hover:text-green-400">Aplicaciones</a>
+                <a href="#beneficios" class="block text-gray-300 hover:text-green-400">Beneficios</a>
+                <a href="#desarrollo" class="block text-gray-300 hover:text-green-400">Desarrollo</a>
+                <a href="#equipo" class="block text-gray-300 hover:text-green-400">Equipo</a>
+                <a href="#contacto" class="block text-gray-300 hover:text-green-400">Contacto</a>
+                <a href="game.html"
+                    class="inline-block bg-green-600 text-yellow-300 px-4 py-2 rounded-full text-center font-semibold hover:bg-green-400 transition">
+                    Probar juego
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO PARALLAX -->
+    <section id="inicio" class="relative h-screen overflow-hidden">
+        <!-- Capa fondo rápido -->
+        <div class="parallax-layer parallax-fast absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        </div>
+
+        <!-- Capa filtro medio -->
+        <div
+            class="parallax-layer parallax-medium absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center overlay-bg">
+            <div class="max-w-3xl px-6 text-center">
+                <p class="uppercase tracking-widest text-green-400 mb-4">Ciencia, Naturaleza y Tecnología</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    Innovando la vida con Biotecnología avanzada
+                </h1>
+                <p class="text-gray-300 mb-10 text-lg">
+                    Aplicamos biotecnología para impulsar soluciones sostenibles en salud, agricultura e industria.
+                </p>
+                <div class="flex justify-center gap-6">
+                    <a href="#aplicaciones"
+                        class="bg-green-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-400 transition">
+                        Explorar aplicaciones
+                    </a>
+                    <a href="#beneficios"
+                        class="border border-green-500 text-green-400 px-8 py-3 rounded-full font-semibold hover:bg-green-500 hover:text-black transition">
+                        Ver beneficios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN APLICACIONES -->
+    <section id="aplicaciones" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6">Áreas clave de aplicación</h2>
+            <p class="text-gray-300 max-w-3xl mx-auto mb-12">
+                Desde la agricultura hasta la medicina, la biotecnología está transformando el mundo.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500 transition text-left">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Agrícola</h3>
+                    <p class="text-gray-300 mb-4">
+                        Mejoramos cultivos con bioproductos, resistencias naturales y eficiencia hídrica.
+                    </p>
+                    <ul class="text-gray-300 list-disc list-inside space-y-1 text-sm">
+                        <li>Biofertilizantes y biopesticidas</li>
+                        <li>Variedades resistentes a plagas</li>
+                        <li>Optimización del uso de agua</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500 transition text-left">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Médica</h3>
+                    <p class="text-gray-300 mb-4">
+                        Desarrollo de terapias personalizadas, vacunas y diagnóstico puntual.
+                    </p>
+                    <ul class="text-gray-300 list-disc list-inside space-y-1 text-sm">
+                        <li>Terapias génicas y celulares</li>
+                        <li>Vacunas innovadoras</li>
+                        <li>Diagnóstico rápido y fiable</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500 transition text-left">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Industrial</h3>
+                    <p class="text-gray-300 mb-4">
+                        Procesos más limpios con enzimas y microorganismos que sustituyen química tradicional.
+                    </p>
+                    <ul class="text-gray-300 list-disc list-inside space-y-1 text-sm">
+                        <li>Biocombustibles avanzados</li>
+                        <li>Biorremediación ambiental</li>
+                        <li>Producción eficiente de biomateriales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-8">Beneficios clave de la biotecnología</h2>
+            <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center mb-4">
+                        <span class="text-black font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Sostenibilidad real</h3>
+                    <p class="text-gray-300 text-sm max-w-xs">
+                        Reducimos residuos y consumo energético, promoviendo procesos respetuosos con el medio ambiente.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center mb-4">
+                        <span class="text-black font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Innovación continua</h3>
+                    <p class="text-gray-300 text-sm max-w-xs">
+                        Integración constante de nuevas técnicas biotecnológicas y herramientas digitales.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center mb-4">
+                        <span class="text-black font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Escalabilidad</h3>
+                    <p class="text-gray-300 text-sm max-w-xs">
+                        Soluciones diseñadas para pasar del laboratorio a la industria con seguridad y eficiencia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESARROLLO (CARRUSEL) -->
+    <section id="desarrollo" class="bg-black py-20 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-8">Nuestro proceso de desarrollo</h2>
+            <p class="text-gray-300 max-w-3xl mx-auto mb-12">
+                Desde la investigación en laboratorio hasta la implementación en campo.
+            </p>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Carousel Container -->
+                <div class="overflow-hidden rounded-xl shadow-2xl relative h-64 md:h-96">
+                    <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out h-full">
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                alt="Investigación" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 p-4">
+                                <h3 class="text-white font-bold text-lg">Investigación y Análisis</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                alt="Desarrollo" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 p-4">
+                                <h3 class="text-white font-bold text-lg">Pruebas de Laboratorio</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                alt="Implementación" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 p-4">
+                                <h3 class="text-white font-bold text-lg">Implementación y Escalamiento</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button id="prev-btn"
+                    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-green-500 hover:text-black transition focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="next-btn"
+                    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-green-500 hover:text-black transition focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-8">Nuestro Equipo</h2>
+            <p class="text-gray-300 max-w-3xl mx-auto mb-12">
+                Mentes brillantes trabajando juntas para un futuro sostenible.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500 transition group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-green-500">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
+                            alt="Miembro 1"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">Dr. Alejandro Silva</h3>
+                    <p class="text-green-400 text-sm mb-3">Director de Investigación</p>
+                    <p class="text-gray-400 text-sm">
+                        Especialista en biología molecular con más de 15 años de experiencia liderando proyectos
+                        innovadores.
+                    </p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500 transition group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-green-500">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+                            alt="Miembro 2"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">Ing. María González</h3>
+                    <p class="text-green-400 text-sm mb-3">Jefa de Operaciones</p>
+                    <p class="text-gray-400 text-sm">
+                        Experta en escalamiento de bioprocesos y optimización industrial sostenible.
+                    </p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500 transition group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-green-500">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
+                            alt="Miembro 3"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white">Lic. Carlos Ruiz</h3>
+                    <p class="text-green-400 text-sm mb-3">Desarrollo de Negocios</p>
+                    <p class="text-gray-400 text-sm">
+                        Conecta la ciencia con el mercado para llevar soluciones biotecnológicas a quien más las
+                        necesita.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL PARALLAX -->
+    <section class="relative h-[50vh] overflow-hidden">
+        <div class="parallax-layer parallax-fast absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.pexels.com/photos/3735760/pexels-photo-3735760.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        </div>
+        <div
+            class="parallax-layer parallax-medium absolute inset-0 bg-black bg-opacity-85 flex items-center justify-center px-6 overlay-bg">
+            <div class="max-w-xl text-center">
+                <h2 class="text-3xl font-bold mb-4 text-green-400">
+                    Lleva tu proyecto biotecnológico al siguiente nivel
+                </h2>
+                <p class="text-gray-200 mb-6">
+                    Colabora con expertos en ciencia, ingeniería y negocios para transformar tus ideas en realidad.
+                </p>
+                <a href="#contacto"
+                    class="bg-green-500 text-black px-8 py-3 rounded-full font-semibold hover:bg-green-400 transition">
+                    Solicitar asesoría
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="bg-black py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-green-400 text-center">
+                Conversemos sobre tu idea
+            </h2>
+            <form class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm mb-2">Nombre</label>
+                    <input type="text" placeholder="Tu nombre"
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500" />
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Correo electrónico</label>
+                    <input type="email" placeholder="tu@correo.com"
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500" />
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block text-sm mb-2">Tipo de proyecto</label>
+                    <select
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500">
+                        <option>Biotecnología agrícola</option>
+                        <option>Biotecnología médica</option>
+                        <option>Biotecnología industrial</option>
+                        <option>Investigación académica</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block text-sm mb-2">Descripción</label>
+                    <textarea rows="4" placeholder="Describe brevemente tu idea o necesidad."
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500"></textarea>
+                </div>
+                <div class="md:col-span-2 flex justify-center">
+                    <button type="submit"
+                        class="bg-green-500 text-white px-10 py-3 rounded-full font-semibold hover:bg-green-400 transition">
+                        Enviar propuesta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-gray-800 py-6">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 space-y-2 md:space-y-0">
+            <span>© 2025 Biotecnología Viva. Todos los derechos reservados.</span>
+            <span>Hecho con ciencia, datos y pasión por la vida.</span>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+
+            const fastLayer = document.querySelectorAll('.parallax-fast');
+            const mediumLayer = document.querySelectorAll('.parallax-medium');
+
+            fastLayer.forEach(el => {
+                el.style.transform = `translateY(${scrolled * 0.3}px)`;
+            });
+
+            mediumLayer.forEach(el => {
+                el.style.transform = `translateY(${scrolled * 0.1}px)`;
+            });
+        });
+
+        // Theme Toggle Logic
+        const toggleBtn = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            if (body.classList.contains('light-theme')) {
+                // Light Mode Active -> Show Moon (to switch to dark)
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                // Dark Mode Active -> Show Sun (to switch to light)
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Carousel Logic
+        const track = document.getElementById('carousel-track');
+        const slides = track.children;
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            const width = slides[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentSlide * width}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        // Handle resize for responsive carousel
+        window.addEventListener('resize', updateCarousel);
+
+        // Scroll Spy / Active Link Logic
+        const sections = document.querySelectorAll('section[id]');
+
+        function highlightNavigation() {
+            let scrollY = window.scrollY;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 150; // Offset for navbar
+                const sectionId = current.getAttribute('id');
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('nav a[href*=' + sectionId + ']').forEach(link => {
+                        // Remove active class from all links first? 
+                        // No, this loop runs for every section. 
+                        // Better approach: Loop through all links and check.
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollY = window.scrollY;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            navLinks.forEach(link => {
+                link.classList.remove('text-green-400', 'font-bold');
+                // Restore mobile text color if needed, but simple removal is usually enough if base style is set
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-green-400', 'font-bold');
+                    link.classList.remove('text-gray-300'); // For mobile
+                } else {
+                    if (link.closest('#mobile-menu')) {
+                        link.classList.add('text-gray-300');
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

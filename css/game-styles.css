@@ -1,0 +1,110 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #2d3748 0%, #1a202c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+canvas {
+    /* Field background */
+    background: url('../img/landscape.png') no-repeat center center;
+    background-size: cover;
+    display: block;
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.2),
+        0 10px 10px -5px rgba(0, 0, 0, 0.1),
+        0 0 0 8px rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}
+
+#startMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+    z-index: 10;
+}
+
+#startMenu h1 {
+    color: #2d3748;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.instructions {
+    margin: 1.5rem 0;
+    text-align: left;
+    background: #f7fafc;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.instructions p {
+    margin: 0.5rem 0;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+#startButton {
+    background: linear-gradient(to right, #48bb78, #38a169);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(56, 161, 105, 0.3);
+}
+
+#startButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(56, 161, 105, 0.4);
+}
+
+#startButton:active {
+    transform: translateY(0);
+}
+
+#pauseButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    transition: transform 0.2s;
+    color: #4a5568;
+}
+
+#pauseButton svg {
+    width: 24px;
+    height: 24px;
+}
+
+#pauseButton:hover {
+    transform: scale(1.1);
+}

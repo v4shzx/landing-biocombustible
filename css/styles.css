@@ -1,0 +1,89 @@
+/* Para evitar saltos en scroll con transform */
+.parallax-layer {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+    background-color: #ffffff;
+    color: #1a202c;
+}
+
+body.light-theme .bg-black {
+    background-color: #ffffff !important;
+}
+
+body.light-theme .text-white {
+    color: #1a202c !important;
+}
+
+body.light-theme .text-gray-200,
+body.light-theme .text-gray-300 {
+    color: #4a5568 !important;
+}
+
+body.light-theme .text-gray-500 {
+    color: #718096 !important;
+}
+
+body.light-theme .bg-gray-900 {
+    background-color: #f7fafc !important;
+    color: #1a202c !important;
+}
+
+body.light-theme .border-gray-800,
+body.light-theme .border-gray-700 {
+    border-color: #e2e8f0 !important;
+}
+
+/* Header specific */
+body.light-theme header {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Mobile Menu specific */
+body.light-theme #mobile-menu {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-top-color: #e2e8f0 !important;
+}
+
+body.light-theme #mobile-menu-btn {
+    color: #4a5568 !important;
+}
+
+body.light-theme #mobile-menu-btn:hover {
+    color: #1a202c !important;
+}
+
+/* Input fields in light mode */
+body.light-theme input,
+body.light-theme select,
+body.light-theme textarea {
+    background-color: #edf2f7 !important;
+    color: #1a202c !important;
+    border-color: #cbd5e0 !important;
+}
+
+/* Button hover in light mode */
+body.light-theme #theme-toggle:hover {
+    background-color: #e2e8f0;
+}
+
+/* Overlays in light mode */
+body.light-theme .overlay-bg {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-image: none !important;
+    opacity: 1 !important;
+}
+
+/* Specific adjustment for Hero section in light mode */
+body.light-theme #inicio .overlay-bg {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Green text adjustment for light mode */
+body.light-theme .text-green-400 {
+    color: #059669 !important;
+    /* green-600 */
+}
