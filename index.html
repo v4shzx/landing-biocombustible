@@ -458,39 +458,83 @@
     <section id="contacto" class="bg-black py-16">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold mb-6 text-green-400 text-center">
-                Conversemos sobre tu idea
+                Calcula el potencial de tu proyecto
             </h2>
             <form class="grid md:grid-cols-2 gap-6">
+                <!-- Información Personal -->
                 <div>
-                    <label class="block text-sm mb-2">Nombre</label>
-                    <input type="text" placeholder="Tu nombre"
-                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500" />
+                    <label class="block text-sm mb-2 text-gray-300">Nombre</label>
+                    <input type="text" placeholder="Tu nombre" required
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white" />
                 </div>
                 <div>
-                    <label class="block text-sm mb-2">Correo electrónico</label>
-                    <input type="email" placeholder="tu@correo.com"
-                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500" />
+                    <label class="block text-sm mb-2 text-gray-300">Correo electrónico</label>
+                    <input type="email" placeholder="tu@correo.com" required
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white" />
                 </div>
-                <div class="md:col-span-2">
-                    <label class="block text-sm mb-2">Tipo de proyecto</label>
+                <div>
+                    <label class="block text-sm mb-2 text-gray-300">Teléfono</label>
+                    <input type="tel" placeholder="+52 55 1234 5678"
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white" />
+                </div>
+
+                <!-- Datos del Proyecto (Categoricos) -->
+                <div>
+                    <label class="block text-sm mb-2 text-gray-300">Sector</label>
                     <select
-                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500">
-                        <option>Biotecnología agrícola</option>
-                        <option>Biotecnología médica</option>
-                        <option>Biotecnología industrial</option>
-                        <option>Investigación académica</option>
-                        <option>Otro</option>
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white">
+                        <option value="agricultura">Agricultura</option>
+                        <option value="ganaderia">Ganadería</option>
+                        <option value="industria">Industria</option>
+                        <option value="restaurante">Restaurante / Comedor</option>
+                        <option value="residencial">Residencial / Doméstico</option>
+                        <option value="otro">Otro</option>
                     </select>
                 </div>
+                <div>
+                    <label class="block text-sm mb-2 text-gray-300">Tipo de Residuo Principal</label>
+                    <select
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white">
+                        <option value="estiercol">Estiércol</option>
+                        <option value="cosecha">Restos de Cosecha</option>
+                        <option value="alimentos">Desechos de Alimentos</option>
+                        <option value="aguas">Aguas Residuales</option>
+                        <option value="aceites">Aceites y Grasas</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm mb-2 text-gray-300">Uso Principal del Biogás</label>
+                    <select
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white">
+                        <option value="electricidad">Generación de Electricidad</option>
+                        <option value="calor">Calefacción / Calor Industrial</option>
+                        <option value="cocina">Cocina</option>
+                        <option value="agua">Calentamiento de Agua</option>
+                    </select>
+                </div>
+
+                <!-- Datos Cuantitativos -->
+                <div>
+                    <label class="block text-sm mb-2 text-gray-300">Generación de Residuos (kg/día)</label>
+                    <input type="number" min="0" placeholder="Ej. 50" required
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white" />
+                </div>
+                <div>
+                    <label class="block text-sm mb-2 text-gray-300">Área Disponible (m²)</label>
+                    <input type="number" min="0" placeholder="Ej. 20"
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white" />
+                </div>
+
                 <div class="md:col-span-2">
-                    <label class="block text-sm mb-2">Descripción</label>
-                    <textarea rows="4" placeholder="Describe brevemente tu idea o necesidad."
-                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500"></textarea>
+                    <label class="block text-sm mb-2 text-gray-300">Comentarios Adicionales</label>
+                    <textarea rows="3" placeholder="Describe brevemente cualquier otro detalle relevante."
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 text-white"></textarea>
                 </div>
                 <div class="md:col-span-2 flex justify-center">
                     <button type="submit"
-                        class="bg-green-500 text-white px-10 py-3 rounded-full font-semibold hover:bg-green-400 transition">
-                        Enviar propuesta
+                        class="bg-green-500 text-black px-10 py-3 rounded-full font-semibold hover:bg-green-400 transition transform hover:scale-105">
+                        Enviar Respuesta
                     </button>
                 </div>
             </form>
