@@ -28,7 +28,7 @@
                 <a href="#contacto" class="hover:text-green-400">Contacto</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-800 transition focus:outline-none"
+                <button id="theme-toggle" class="hidden md:inline-flex p-2 rounded-full hover:bg-gray-800 transition focus:outline-none"
                     aria-label="Cambiar tema">
                     <!-- Sun Icon (Visible by default for Dark Mode) -->
                     <svg id="sun-icon" class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor"
@@ -49,13 +49,13 @@
                 </a>
                 <a href="login.html"
                     id="stats-button"
-                    class="border border-green-500 text-green-400
+                    class="hidden md:inline-flex border border-green-500 text-green-400
                            px-3 py-1 md:px-4 md:py-2
                            rounded-full
                            text-xs md:text-sm
                            font-semibold
                            hover:bg-green-500 hover:text-black
-                           transition flex items-center justify-center">
+                           transition items-center justify-center">
                     Ver estadísticas
                 </a>
 
@@ -79,9 +79,28 @@
                 <a href="#desarrollo" class="block text-gray-300 hover:text-green-400">Desarrollo</a>
                 <a href="#equipo" class="block text-gray-300 hover:text-green-400">Equipo</a>
                 <a href="#contacto" class="block text-gray-300 hover:text-green-400">Contacto</a>
+                <button id="theme-toggle-mobile" class="flex items-center space-x-2 text-gray-300 hover:text-white focus:outline-none">
+                     <!-- Sun Icon (Visible by default for Dark Mode) -->
+                     <svg id="sun-icon-mobile" class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                         d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                     </path>
+                 </svg>
+                 <!-- Moon Icon (Hidden by default for Dark Mode) -->
+                 <svg id="moon-icon-mobile" class="w-5 h-5 text-gray-800 hidden" fill="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                 </svg>
+                    <span>Cambiar tema</span>
+                </button>
                 <a href="game.html"
                     class="inline-block bg-green-600 text-yellow-300 px-4 py-2 rounded-full text-center font-semibold hover:bg-green-400 transition">
                     Probar juego
+                </a>
+                <a href="login.html"
+                    class="inline-block border border-green-500 text-green-400 px-4 py-2 rounded-full text-center font-semibold hover:bg-green-500 hover:text-black transition">
+                    Ver estadísticas
                 </a>
             </nav>
         </div>
@@ -124,7 +143,7 @@
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6">Áreas clave de aplicación</h2>
             <p class="text-gray-300 max-w-3xl mx-auto mb-12">
-                Desde la agricultura hasta la ingenieria, la biotecnología está transformando el mundo.
+                Desde la agricultura hasta la ingeniería, la biotecnología está transformando el mundo.
             </p>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -133,8 +152,8 @@
                     <h3 class="text-xl font-semibold mb-3 text-white">Agrícola</h3>
                     <p class="text-gray-300 mb-4">
                        Nuestro biodigestor convierte restos de cosechas, estiércol y otros residuos del campo en biogás,
-                       que puede usarse para cocinar, calentar invernaderos o generar electricidad en el rancho.Además
-                       , el lodo residual funciona como biofertilizante rico en nutrientes, ayudando a mejorar la calidad
+                       que puede usarse para cocinar, calentar invernaderos o generar electricidad en el rancho. Además,
+                       el lodo residual funciona como biofertilizante rico en nutrientes, ayudando a mejorar la calidad
                         del suelo y disminuir el uso de fertilizantes químicos.
                     </p>
                 </div>
@@ -144,7 +163,7 @@
                     <h3 class="text-xl font-semibold mb-3 text-white">Médica</h3>
                     <p class="text-gray-300 mb-4">
                         La tecnología de digestión anaerobia se basa en el trabajo de comunidades microbianas especializadas, 
-                        muy estudiadas en biotecnología y microbiología aplicada.En el proyecto se promueve el uso seguro del 
+                        muy estudiadas en biotecnología y microbiología aplicada. En el proyecto se promueve el uso seguro del 
                         biogás y el manejo adecuado de los microorganismos, reforzando prácticas de bioseguridad y de cuidado 
                         de la salud en el entorno donde se instala el sistema.
                     </p>
@@ -155,7 +174,7 @@
                     <h3 class="text-xl font-semibold mb-3 text-white">Industrial</h3>
                     <p class="text-gray-300 mb-4">
                         El metano obtenido puede emplearse como sustituto parcial del gas fósil en pequeñas instalaciones, 
-                        reduciendo emisiones y costos energéticos.Este tipo de procesos biotecnológicos se integra a la 
+                        reduciendo emisiones y costos energéticos. Este tipo de procesos biotecnológicos se integra a la 
                         industria como una opción para valorizar residuos orgánicos y disminuir la cantidad de basura enviada 
                         a rellenos sanitarios.​
                     </p>
@@ -221,7 +240,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-8">Nuestro proceso de desarrollo</h2>
             <p class="text-gray-300 max-w-3xl mx-auto mb-12">
                 Desde la recolección de residuos orgánicos hasta la obtención de biogás, se siguen etapas de trituración, mezcla con 
-                agua y alimentación del biodigestor, donde los microorganismos descomponen la materia sin oxígeno.Después, el biogás 
+                agua y alimentación del biodigestor, donde los microorganismos descomponen la materia sin oxígeno. Después, el biogás 
                 se almacena y se conduce hacia quemadores o equipos de prueba, mientras que el digestato se separa para usarlo como abono, 
                 evaluando siempre la eficiencia y seguridad del sistema.
             </p>
@@ -292,7 +311,7 @@
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <h3 class="text-xl font-semibold text-white">Ing. Alexis Trejo Chavez</h3>
-                    <p class="text-green-400 text-sm mb-3">Biotecnologo</p>
+                    <p class="text-green-400 text-sm mb-3">Biotecnólogo</p>
                     <p class="text-gray-400 text-sm">
                         Especialista en biología molecular con más de 15 años de experiencia liderando proyectos
                         innovadores.
@@ -307,9 +326,9 @@
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <h3 class="text-xl font-semibold text-white">Ing. Joseph Jasam Rivera Reyes</h3>
-                    <p class="text-green-400 text-sm mb-3">Biotecnologo</p>
+                    <p class="text-green-400 text-sm mb-3">Biotecnólogo</p>
                     <p class="text-gray-400 text-sm">
-                        Experta en escalamiento de bioprocesos y optimización industrial sostenible.
+                        Experto en escalamiento de bioprocesos y optimización industrial sostenible.
                     </p>
                 </div>
 
@@ -321,7 +340,7 @@
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <h3 class="text-xl font-semibold text-white">Ing. Evelin Yarely Rodriguez Castro</h3>
-                    <p class="text-green-400 text-sm mb-3">Biotecnologo</p>
+                    <p class="text-green-400 text-sm mb-3">Biotecnóloga</p>
                     <p class="text-gray-400 text-sm">
                         Conecta la ciencia con el mercado para llevar soluciones biotecnológicas a quien más las
                         necesita.
@@ -336,9 +355,9 @@
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <h3 class="text-xl font-semibold text-white">Ing. Yosselin Bautista Garcia</h3>
-                    <p class="text-green-400 text-sm mb-3">Biotecnologo</p>
+                    <p class="text-green-400 text-sm mb-3">Biotecnóloga</p>
                     <p class="text-gray-400 text-sm">
-                        Pionero en técnicas de edición genética CRISPR para aplicaciones médicas.
+                        Pionera en técnicas de edición genética CRISPR para aplicaciones médicas.
                     </p>
                 </div>
 
@@ -350,9 +369,9 @@
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <h3 class="text-xl font-semibold text-white">Ing. Angel Alexander Lazcano Cruz</h3>
-                    <p class="text-green-400 text-sm mb-3">Biotecnologo</p>
+                    <p class="text-green-400 text-sm mb-3">Biotecnólogo</p>
                     <p class="text-gray-400 text-sm">
-                        Investigadora enfocada en la mejora genética de cultivos para climas áridos.
+                        Investigador enfocado en la mejora genética de cultivos para climas áridos.
                     </p>
                 </div>
 
@@ -519,22 +538,27 @@
         });
 
         // Theme Toggle Logic
-        const toggleBtn = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
+        const toggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+        const sunIcons = [document.getElementById('sun-icon'), document.getElementById('sun-icon-mobile')];
+        const moonIcons = [document.getElementById('moon-icon'), document.getElementById('moon-icon-mobile')];
         const body = document.body;
 
-        toggleBtn.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            if (body.classList.contains('light-theme')) {
-                // Light Mode Active -> Show Moon (to switch to dark)
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            } else {
-                // Dark Mode Active -> Show Sun (to switch to light)
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            }
+        toggleBtns.forEach(btn => {
+            if(!btn) return;
+            btn.addEventListener('click', () => {
+                body.classList.toggle('light-theme');
+                const isLight = body.classList.contains('light-theme');
+                
+                if (isLight) {
+                    // Light Mode Active -> Show Moon (to switch to dark)
+                    sunIcons.forEach(icon => icon && icon.classList.add('hidden'));
+                    moonIcons.forEach(icon => icon && icon.classList.remove('hidden'));
+                } else {
+                    // Dark Mode Active -> Show Sun (to switch to light)
+                    sunIcons.forEach(icon => icon && icon.classList.remove('hidden'));
+                    moonIcons.forEach(icon => icon && icon.classList.add('hidden'));
+                }
+            });
         });
 
         // Mobile Menu Logic
