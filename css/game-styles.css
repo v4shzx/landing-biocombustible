@@ -135,3 +135,24 @@ canvas {
 #homeButton:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 600px) {
+    #homeButton {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        left: 10px;
+    }
+
+    #pauseButton {
+        width: 40px;
+        height: 40px;
+        top: 60px; /* 10px + 40px + 10px gap */
+        left: 10px;
+    }
+
+    #homeButton svg, #pauseButton svg {
+        width: 20px;
+        height: 20px;
+    }
+}

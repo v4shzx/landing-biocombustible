@@ -22,12 +22,13 @@ boatImage.onload = function () {
 boatImage.src = 'img/bin.png';
 
 function resizeCanvas() {
-    canvas.width = window.innerWidth * 0.8;
-    canvas.height = window.innerHeight * 0.8;
+    const isMobile = window.innerWidth < 600;
+    const scaleFactor = isMobile ? 0.95 : 0.8;
+
+    canvas.width = window.innerWidth * scaleFactor;
+    canvas.height = window.innerHeight * scaleFactor;
     width = canvas.width;
     height = canvas.height;
-
-    const isMobile = width < 600;
 
     // Scale elements based on screen width
     // Mobile: larger percentages for better visibility/touch
