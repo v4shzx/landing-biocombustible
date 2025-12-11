@@ -11,9 +11,12 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body
-    class="bg-black text-white font-sans overflow-x-hidden flex flex-col min-h-screen"
-  >
+  <body class="bg-black text-white font-sans overflow-x-hidden flex flex-col min-h-screen">
+    <!-- CRITICAL DEBUG BANNER -->
+    <div style="background-color: red; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; z-index: 9999; position: fixed; top: 0; left: 0; width: 100%;">
+        DEBUG MODE: SI VES ESTO, ESTÁS VIENDO EL ARCHIVO CORRECTO
+    </div>
+    <div style="height: 60px;"></div> <!-- Spacer -->
     <header
       class="fixed top-0 left-0 w-full z-30 bg-black bg-opacity-70 backdrop-filter backdrop-blur"
     >
@@ -76,7 +79,7 @@
           </p>
         </div>
 
-        <form action="#" method="POST" class="space-y-6">
+        <form id="loginForm" action="#" method="POST" class="space-y-6">
           <div>
             <label
               for="email"
@@ -161,22 +164,76 @@
     </button>
 
     <script>
-        // Theme Toggle Logic
-        const toggleBtn = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-        const body = document.body;
+        document.body.style.border = "5px solid red"; // Visual confirmation that JS is running
+        alert('DEBUG: Si ves este mensaje, el sistema de JS está funcionando.');
 
-        toggleBtn.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            if (body.classList.contains('light-theme')) {
-                // Light Mode Active -> Show Moon (to switch to dark)
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM cargado');
+            
+            // Theme Toggle
+            const toggleBtn = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
+            const body = document.body;
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    body.classList.toggle('light-theme');
+                    if (body.classList.contains('light-theme')) {
+                        sunIcon.classList.add('hidden');
+                        moonIcon.classList.remove('hidden');
+                    } else {
+                        sunIcon.classList.remove('hidden');
+                        moonIcon.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Login Logic
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    console.log('Formulario enviado');
+                    alert('DEBUG: Enviando formulario...');
+
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const submitBtn = loginForm.querySelector('button[type="submit"]');
+
+                    try {
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Procesando...';
+
+                        // Check if file exists via HEAD request first (optional debugging)
+                        // Just go straight to fetch
+                        const response = await fetch('php/auth_login.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ email, password })
+                        });
+
+                        alert('DEBUG status: ' + response.status);
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                            window.location.href = 'dashboard.html';
+                        } else {
+                            alert('Error: ' + data.message);
+                        }
+
+                    } catch (error) {
+                        alert('Error de conexión: ' + error);
+                        console.error(error);
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Iniciar Sesión';
+                    }
+                });
             } else {
-                // Dark Mode Active -> Show Sun (to switch to light)
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
+                alert('ERRORCRITICO: No se encuentra el formulario loginForm');
             }
         });
     </script>
